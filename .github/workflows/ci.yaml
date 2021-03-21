@@ -44,4 +44,8 @@ jobs:
         run: npm ci
       - name: covarage
         run: npm run coverageCalculation
+      - name: coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 

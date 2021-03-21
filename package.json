@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "jest --verbose",
-    "coverageCalculation": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coverageCalculation": "jest --coverage --coverageReporters=text-lcov"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,6 @@
   "devDependencies": {
     "@grpc/grpc-js": "^1.2.11",
     "@types/jest": "^26.0.21",
-    "coveralls": "^3.1.0",
     "jest": "^26.6.3"
   },
   "jest": {
