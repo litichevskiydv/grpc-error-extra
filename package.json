@@ -2,7 +2,16 @@
   "name": "grpc-error-extra",
   "version": "1.0.0",
   "description": "Utility error class suitable for gRPC error responses and can carry custom details",
+  "engines": {
+    "node": ">=10.10.0"
+  },
   "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "jest --verbose"
   },
@@ -19,5 +28,14 @@
   "bugs": {
     "url": "https://github.com/litichevskiydv/grpc-error-extra/issues"
   },
-  "homepage": "https://github.com/litichevskiydv/grpc-error-extra#readme"
+  "homepage": "https://github.com/litichevskiydv/grpc-error-extra#readme",
+  "dependencies": {
+    "serialize-error": "^8.0.1"
+  },
+  "peerDependencies": {
+    "@grpc/grpc-js": "^1.2.0"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.2.11"
+  }
 }
