@@ -26,3 +26,22 @@ jobs:
         run: npm ci
       - name: test
         run: npm t
+
+  coverage:
+    name: covarage
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: install nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: install dependencies
+        run: npm ci
+      - name: covarage
+        run: jest --coverage --coverageReporters=text-lcov | coveralls
+
