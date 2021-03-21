@@ -1,0 +1,23 @@
+{
+  "name": "grpc-error-extra",
+  "version": "1.0.0",
+  "description": "Utility error class suitable for gRPC error responses and can carry custom details",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litichevskiydv/grpc-error-extra.git"
+  },
+  "keywords": [
+    "grpc",
+    "error"
+  ],
+  "author": "Dmitriy Litichevskiy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/litichevskiydv/grpc-error-extra/issues"
+  },
+  "homepage": "https://github.com/litichevskiydv/grpc-error-extra#readme"
+}
