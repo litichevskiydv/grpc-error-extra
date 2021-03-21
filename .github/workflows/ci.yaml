@@ -43,5 +43,5 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: covarage
-        run: jest --coverage --coverageReporters=text-lcov | coveralls
+        run: npm run coverageCalculation
 
