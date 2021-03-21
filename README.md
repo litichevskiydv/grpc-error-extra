@@ -8,3 +8,45 @@
 [![Coverage Status](https://coveralls.io/repos/github/litichevskiydv/grpc-error-extra/badge.svg?branch=master)](https://coveralls.io/github/litichevskiydv/grpc-error-extra?branch=master)
 
 Utility error class suitable for gRPC error responses and can carry custom details
+
+# Install
+
+`npm i grpc-error-extra`
+
+# Usage
+
+## Sending details to client
+
+```javascript
+const { status } = require("@grpc/grpc-js");
+const { GrpcError } = require("grpc-error-extra");
+
+/*...*/
+
+throw new GrpcError("Validation failed", {
+  statusCode: status.INVALID_ARGUMENT,
+  details: [
+    {
+      field: "name",
+      description: "Name must be unique",
+    },
+  ],
+});
+```
+
+## Wrapping inner error
+
+```javascript
+const { GrpcError } = require("grpc-error-extra");
+
+/*...*/
+
+try {
+  /*...*/
+} catch (error) {
+  const grpcError = new GrpcError("Unhandled exception has occurred", { innerError: error });
+
+  if (callback) callback(grpcError);
+  else call.emit("error", grpcError);
+}
+```
