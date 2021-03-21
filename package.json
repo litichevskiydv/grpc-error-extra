@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "jest --verbose",
-    "coverageCalculation": "jest --coverage --coverageReporters=text-lcov"
+    "coverageCalculation": "jest --coverage"
   },
   "repository": {
     "type": "git",
