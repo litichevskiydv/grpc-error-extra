@@ -9,6 +9,9 @@
 
 Utility error class suitable for gRPC error responses and can carry custom details
 
+## This was migrated to https://github.com/litichevskiydv/grpc-bay
+This repository has been moved to the unified "monorepo". You can find the source under [/packages/grpc-error-extra](https://github.com/litichevskiydv/grpc-bay/tree/master/packages/grpc-error-extra).
+
 # Install
 
 `npm i grpc-error-extra`
